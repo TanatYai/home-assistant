@@ -1,0 +1,13 @@
+version: '3.4'
+services: 
+  ha: 
+    image: homeassistant/home-assistant:latest
+    restart: always
+    container_name: ha  
+    ports: 
+      - 8123:8123
+    environment: 
+      - TZ=Asia/Bangkok
+    volumes:                    
+      - ./ha-config:/config
+    network_mode: host
