@@ -1,9 +1,9 @@
 version: '3.4'
 services: 
-  ha: 
+  home-assistant: 
     image: homeassistant/home-assistant:latest
     restart: always
-    container_name: ha  
+    container_name: home-assistant  
     ports: 
       - 8123:8123
     environment: 
